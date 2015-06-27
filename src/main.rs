@@ -3,8 +3,8 @@
 extern crate test;
 
 pub fn sequential_fold(iterations: i32) -> i32 {
-    (0..iterations).filter(|&item| item % 2 == 0) // Keep Evens
-        .map(|item| item * 2) // Multiply by two.
+    (0..iterations).filter(|&item| item % 2 == 0)
+        .map(|item| item * 2)
         .fold(0, |accumulator, item| accumulator + item)
 }
 
@@ -25,7 +25,7 @@ pub fn raw_loop(iterations: i32) -> i32 {
             sum = sum + (x*2)
         }
     };
-    return sum;
+    sum
 }
 
 #[cfg(test)]
